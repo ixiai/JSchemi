@@ -1,0 +1,26 @@
+p {
+    color:aqua;
+    font-family: "Courier New", "Lucida Console", monospace;
+}
+
+#divTestoComando {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 10;
+}
+
+canvas {
+    z-index: -1;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
