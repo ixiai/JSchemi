@@ -84,6 +84,9 @@ function oggettiSonoUguali(a, b) {
 
 function idEnteDaSuoNome(nome) {
     for (let jd in schema.enti) {
+        if (schema.enti[jd] == null) {
+            continue;
+        }
         if (schema.enti[jd].nome == nome) {
             return jd;
         }

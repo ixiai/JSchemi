@@ -9,6 +9,9 @@ function simula() {
         if (statoSimulazioneEnti[jd] == undefined) {
 
         }
+        if (schema.enti[jd] == null) {
+            continue;
+        }
         statoSimulazioneTensioni.enti[jd] = {
             tensioneMorsetti: {}
         }
@@ -92,6 +95,9 @@ function simula() {
             }
         }
         for (let jd in schema.enti) {
+            if (schema.enti[jd] == null) {
+                continue;
+            }
             switch (schema.enti[jd].tipo) {
                 case "contattoSemplice":
                     const nomeSplit = schema.enti[jd].nome.split(".");

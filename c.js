@@ -86,6 +86,9 @@ function disegna() {
         if (idEnte == idEnteSelezionato && !lampeggio) {
             continue;
         }
+        if (schema.enti[idEnte] == null) {
+            continue;
+        }
         const ente = schema.enti[idEnte];
         prototipiEnti[ente.tipo].disegna(ctx, ente.x, ente.y, ente.parametri, idEnte);
         const nomeDaScrivere = ente.nome.includes(".") ? ente.nome.split(".")[1] : ente.nome;
@@ -514,6 +517,9 @@ function mouseDown(e) {
             idCavoSelezionato = null;
             for (let idEnte in schema.enti) {
                 const ente = schema.enti[idEnte];
+                if (ente == null) {
+                    continue;
+                }
                 if (ente.x == x && ente.y == y) {
                     idEnteSelezionato = idEnte;
                     if (e.buttons == 4) {
@@ -543,6 +549,9 @@ function mouseDown(e) {
             if (idEnteSelezionato === null) {
                 for (let jdCavo in schema.cavi) {
                     const cavo = schema.cavi[jdCavo];
+                    if (cavo == null) {
+                        continue;
+                    }
                     const massimaDistanzaDaCavoPerSelezione = 0.3;
                     for (let j = 1; j < Object.keys(cavo).length; j++) {
                         if (massimaDistanzaDaCavoPerSelezione >= calcolaDistanzaPuntoSegmento({ x: xFloat, y: yFloat }, trovaCoordinatePuntoFilo(cavo[j - 1]), trovaCoordinatePuntoFilo(cavo[j]))) {
