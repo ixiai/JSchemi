@@ -566,6 +566,9 @@ function mouseDown(e) {
             idCavoSelezionato = null;
             for (let idEnte in schema.enti) {
                 const ente = schema.enti[idEnte];
+                if (ente == null) {
+                    continue;
+                }
                 if (ente.x == x && ente.y == y) {
                     idEnteSelezionato = idEnte;
                     break;
