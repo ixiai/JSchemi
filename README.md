@@ -14,7 +14,7 @@ Tasto centrale del mouse: interazione con tasti e maniglie (<kbd>Ctrl</kbd>/<kbd
 <kbd>?</kbd> - Aiuto<br>
 <kbd>Esc</kbd> - Annulla<br>
 <kbd>Del</kbd> - Cancella selezionato<br>
-<kbd>PageUp</kbd>/<kbd>PageDown</kbd> - Cambio stile grafico<br>
+<kbd>Home</kbd>/<kbd>End</kbd> - Cambio stile grafico<br>
 
 Posa nuovo:<br>
 <kbd>T</kbd> - TASTO<br>
